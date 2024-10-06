@@ -1,5 +1,5 @@
 :root {
-  --body-bg-gradient: linear-gradient(to top right, #fc2c77 0%, #6c4079 100%);
+  --body-bg:#eee;
   --color: #555;
   --title-color : #555;
   --button-color: #4272d7;
@@ -15,7 +15,7 @@
 }
 
 body {
-  background: var(--body-bg-gradient);
+  background: var(--body-bg);
   color: var(--color);
 
   font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;
