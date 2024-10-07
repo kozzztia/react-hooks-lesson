@@ -1,0 +1,19 @@
+:root{
+    width : 100%;
+    margin: 0 auto;
+    --header-height: 50px;
+    --footer-height: 50px;
+}
+.header{
+    height: var(--header-height);
+    background: red;
+}
+
+.main{
+    min-height: calc(100vh - var(--header-height) - var(--footer-height));
+}
+
+footer{
+    height: var(--footer-height);
+    background: olive;
+}
