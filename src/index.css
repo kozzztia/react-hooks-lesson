@@ -1,12 +1,18 @@
 :root {
-  --body-bg:#eee;
-  --color: #555;
-  --title-color : #555;
-  --button-color: #4272d7;
-  --content-bg: #fff;
-  --radius: 10px;
-  --input-bg: #fafafa;
+  --body-bg-light: rgb(255, 255, 255);
+  --secondary-bg-light: rgb(248, 248, 248);
+  --color-light: rgb(88, 82, 128);
+
+  --body-bg-dark: rgba(48, 44, 64);
+  --secondary-bg-dark: rgb(44, 40, 57);
+  --color-dark: rgb(255, 255, 255);
+
+
+  --font-size: 10px;
+  --transition: background-color .6s ease-in-out, color .2s ease-in-out;
 }
+
+
 
 * {
   padding: 0;
@@ -14,7 +20,21 @@
   box-sizing: border-box;
 }
 
+html[data-theme="dark"] {
+  --body-bg: var(--body-bg-dark);
+  --secondary-bg: var(--secondary-bg-dark);
+  --color: var(--color-dark);
+}
+
+html[data-theme="light"] {
+  --body-bg: var(--body-bg-light);
+  --secondary-bg: var(--secondary-bg-light);
+  --color: var(--color-light);
+}
+
+
 body {
+  transition: var(--transition);
   background: var(--body-bg);
   color: var(--color);
   font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;

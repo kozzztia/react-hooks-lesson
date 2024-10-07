@@ -1,19 +1,21 @@
 import { PropTypes } from 'prop-types';
-import styles from './styles.module.css'
+import styles from './styles.module.css';
+import Navigation from './Navigation';
 
 const Layout = ({ children }) => {
     return (
-        <>
+        <main className={styles.main}>
             <header className={styles.header}>
                 header
             </header>
-            <main className={styles.main}>
+            <Navigation className={styles.nav}/>
+            <section className={styles.section}>
                 {children}
-            </main>
+            </section>
             <footer className={styles.footer}>
                 footer
             </footer>
-        </>
+        </main>
     )
 }
 Layout.propTypes = {

@@ -1,19 +1,38 @@
-:root{
-    width : 100%;
-    margin: 0 auto;
+:root {
     --header-height: 50px;
     --footer-height: 50px;
 }
-.header{
+
+.main {
+    display: grid;
+    grid-template-areas: 
+        "nav header header"
+        "nav section section"
+        "nav footer footer";
+    grid-template-columns: 250px 1fr 1fr;
+    grid-template-rows: auto 1fr auto; 
+    min-height: 100vh; 
+}
+
+.header {
     height: var(--header-height);
-    background: red;
+    background: inherit;
+    grid-area: header;
 }
 
-.main{
-    min-height: calc(100vh - var(--header-height) - var(--footer-height));
+.nav {
+    transition: var(--transition);
+    background: var(--secondary-bg);
+    grid-area: nav;
 }
 
-footer{
+.section {
+    background: inheri;
+    grid-area: section;
+}
+
+.footer {
     height: var(--footer-height);
-    background: olive;
+    background: inherit;
+    grid-area: footer;
 }
