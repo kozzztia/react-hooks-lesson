@@ -12,12 +12,35 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,100&display=swap" rel="stylesheet">
   <title>react-hooks-lesson</title>
-  <script type="module" crossorigin src="/react-hooks-lesson/assets/index-C0OD4LNb.js"></script>
-  <link rel="stylesheet" crossorigin href="/react-hooks-lesson/assets/index-CiE5woxW.css">
+  <style>
+    html[data-theme="dark"] {
+      --body-bg: rgba(48, 44, 64);
+      --secondary-bg: rgb(44, 40, 57);
+      --color: rgb(255, 255, 255);
+    }
+
+    html[data-theme="light"] {
+      --body-bg: rgb(255, 255, 255);
+      --secondary-bg: rgb(248, 248, 248);
+      --color: rgb(88, 82, 128);
+    }
+
+    body {
+      background: var(--body-bg);
+      color: var(--color);
+      transition: background-color .1s ease-in-out, color .3s ease-in-out;
+    }
+  </style>
+  <script type="module" crossorigin src="/react-hooks-lesson/assets/index-BgIufdfT.js"></script>
+  <link rel="stylesheet" crossorigin href="/react-hooks-lesson/assets/index-BYEh10pr.css">
 </head>
 
 <body>
   <div id="root"></div>
+  <script>
+    const savedTheme = localStorage.getItem("theme") || "light";
+    document.documentElement.setAttribute("data-theme", savedTheme);
+  </script>
 </body>
 
 </html>
