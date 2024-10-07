@@ -2,14 +2,16 @@
   --body-bg-light: rgb(255, 255, 255);
   --secondary-bg-light: rgb(248, 248, 248);
   --color-light: rgb(88, 82, 128);
+  --elements-bg-light: rgb(44, 40, 57);
 
   --body-bg-dark: rgba(48, 44, 64);
   --secondary-bg-dark: rgb(44, 40, 57);
   --color-dark: rgb(255, 255, 255);
+  --elements-bg-dark: rgb(255, 255, 255);
 
 
   --font-size: 10px;
-  --transition: background-color .6s ease-in-out, color .2s ease-in-out;
+  --transition: background-color .1s ease-in-out, color .3s ease-in-out;
 }
 
 
@@ -24,12 +26,14 @@ html[data-theme="dark"] {
   --body-bg: var(--body-bg-dark);
   --secondary-bg: var(--secondary-bg-dark);
   --color: var(--color-dark);
+  --elements-bg: var(--elements-bg-dark);
 }
 
 html[data-theme="light"] {
   --body-bg: var(--body-bg-light);
   --secondary-bg: var(--secondary-bg-light);
   --color: var(--color-light);
+  --elements-bg: var(--elements-bg-light);
 }
 
 

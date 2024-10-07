@@ -1,6 +1,6 @@
 import { PropTypes } from 'prop-types';
 import styles from './styles.module.css';
-import Navigation from './Navigation';
+import Navigation from '../Navigation/Navigation';
 
 const Layout = ({ children }) => {
     return (
