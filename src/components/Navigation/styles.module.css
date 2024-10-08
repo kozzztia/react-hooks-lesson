@@ -1,5 +1,28 @@
 .navigation{
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: start;
+
+    figure{
+        gap: 10px;
+        margin: 80px auto 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        img{
+            width: 80px;
+            height: 80px;
+        }
+        figcaption{
+            transition: var(--transition);
+            font-size: 1.6rem;
+            color: var(--color);
+            text-transform: capitalize;
+        }
+    }
     
 
 
@@ -7,24 +30,50 @@
         list-style: none;
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 16px;
     }
     .navLink{
-
         color: var(--color);
         font-size: var(--font-size);
-
-
         a{
-            transition: var(--transition);
+            transition: var(--transition), border-color 0.1s ease-in-out;
             color: inherit;
             text-decoration: none;
+            width : 100%;
+            min-height: 45px;
+            cursor : pointer;
+            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            gap : 16px;
+            padding: 5px 5px 5px 30px;
+            border-left: 3px solid transparent;
+            text-transform: capitalize;
+            svg{
+                width : 16px;
+                height: 16px;
+                fill: var(--color);
+                transition: var(--transition);
+            }
+        }
+        &:hover{
+            background: var(--hover-bg);
         }
         .active{
-            color: red;
+            border-left: 3px solid var(--color);
+            background: var(--hover-bg);
+            svg{
+                transform: scale(1.5);
+            }
         }
 
 
+    }
+
+    .themeButton{
+        bottom: 20px;
+        right: 20px;
     }
 
 }
