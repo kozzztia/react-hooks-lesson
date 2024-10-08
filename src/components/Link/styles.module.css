@@ -1,0 +1,18 @@
+
+.link{
+    text-decoration: none;
+    color: var(--color);
+    font-size: 1rem;
+    font-weight: bold;
+    user-select: none;
+    justify-content: center;
+    margin-bottom: 15px;
+    padding  :12px;
+    border-radius: 50px;
+    background: linear-gradient(122deg, rgb(128, 74, 216) 0%, rgb(98, 75, 217) 100%);
+    text-transform: uppercase;
+    &:hover{
+        transition: .4s ease-in-out;
+        box-shadow: rgba(128, 74, 216, 0.6) 0px 0px 7px;
+    }
+}
