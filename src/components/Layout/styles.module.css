@@ -1,6 +1,7 @@
 :root {
-    --header-height: 65px;
+    --header-height: 60px;
     --footer-height: 50px;
+    --nav-width: 25vw;
 }
 
 .main {
@@ -51,6 +52,7 @@
     transition: var(--transition);
     background: var(--secondary-bg);
     grid-area: nav;
+    min-width: min-content;
 }
 
 .section {
