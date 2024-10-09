@@ -4,7 +4,7 @@ import DepositLink from "../Link/DepositLink";
 
 
 import styles from "./styles.module.css";
-import {tableProperties} from "../../consts";
+import { tableProperties } from "../../consts";
 
 const Table = ({ properties, linked }) => {
     return (
@@ -22,17 +22,23 @@ const Table = ({ properties, linked }) => {
                 {properties.map((property, index) => (
                     <tr key={index}>
                         <td >
-                            <img src={property.userInon} alt="userInon" />
-                            <span><p>{property.property}</p><p>{property.city}</p></span></td>
+                            <div>
+                                <img src={property.userInon} alt="userInon" />
+                                <span><p>{property.property}</p><p>{property.city}</p></span>
+                            </div>
+                        </td>
+
                         <td >{property.moveInDate}</td>
                         <td >{property.rent}</td>
                         <td >{property.deposit}</td>
+                        
                         <td >
-                            <p>{property.status}</p>
-                            {
-                                linked ? <DepositLink link={`deposits/${property.id}`} title="Details"/>:
-                                <span style={{backgroundColor: property.color}}></span>
-                            }
+                            <div><p>{property.status}</p>
+                                {
+                                    linked ? <DepositLink link={`deposits/${property.id}`} title="Details" /> :
+                                        <span style={{ backgroundColor: property.color }}></span>
+                                }
+                            </div>
                         </td>
                     </tr>
                 ))}
