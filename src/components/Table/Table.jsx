@@ -23,7 +23,7 @@ const Table = ({ properties, linked }) => {
                     <tr key={index}>
                         <td >
                             <div>
-                                <img src={property.userInon} alt="userInon" />
+                                <img src={property.userIcon} alt="userInon" />
                                 <span><p>{property.property}</p><p>{property.city}</p></span>
                             </div>
                         </td>

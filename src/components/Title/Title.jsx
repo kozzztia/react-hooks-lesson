@@ -17,7 +17,7 @@ const Title = ({text, count, role}) => {
 Title.propTypes = {
     text: PropTypes.string.isRequired,
     role: PropTypes.oneOf(["active", "closed"]),
-    count: PropTypes.number.isRequired,
+    count: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
 }
 
 export default Title
