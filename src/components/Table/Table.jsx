@@ -21,15 +21,18 @@ const Table = ({ properties, linked }) => {
             <tbody>
                 {properties.map((property, index) => (
                     <tr key={index}>
-                        <td ><img src={property.userInon} alt="userInon" /><span><p>{property.property}</p><p>{property.city}</p></span></td>
+                        <td >
+                            <img src={property.userInon} alt="userInon" />
+                            <span><p>{property.property}</p><p>{property.city}</p></span></td>
                         <td >{property.moveInDate}</td>
                         <td >{property.rent}</td>
                         <td >{property.deposit}</td>
                         <td >
-                            {property.status}
+                            <p>{property.status}</p>
                             {
                                 linked ? <DepositLink link={`deposits/${property.id}`} title="Details"/>:
-                                <span style={{backgroundColor: property.color}}></span>}
+                                <span style={{backgroundColor: property.color}}></span>
+                            }
                         </td>
                     </tr>
                 ))}
