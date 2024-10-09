@@ -10,14 +10,13 @@ const Home = () => {
       <Title text="active deposits" count={activeProperties.length} role="active"/> 
       <Table properties={activeProperties.slice(0, 3)}/>
       <DepositLink link="active" title="All active deposits" />
-
       
       <Title text="closed deposits" count={closeProperties.length}/>
       <Table properties={closeProperties.slice(0, 3)}/>
       <DepositLink link="closed" title="All closed deposits"/>
-
     </>
   )
 }
 
 export default Home
+
