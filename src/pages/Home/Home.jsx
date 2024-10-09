@@ -4,16 +4,17 @@ import { activeProperties, closeProperties } from "../../consts.js";
 import DepositLink from "../../components/Link/DepositLink.jsx";
 
 const Home = () => {
+  
   return (
     <>
       <Title text="active deposits" count={activeProperties.length} role="active"/> 
-      <Table properties={activeProperties}/>
-      <DepositLink link="active"/>
+      <Table properties={activeProperties.slice(0, 3)}/>
+      <DepositLink link="active" title="All active deposits" />
 
       
-      <Title text="closed deposits" count={10}/>
-      <Table properties={closeProperties}/>
-      <DepositLink link="closed"/>
+      <Title text="closed deposits" count={closeProperties.length}/>
+      <Table properties={closeProperties.slice(0, 3)}/>
+      <DepositLink link="closed" title="All closed deposits"/>
 
     </>
   )

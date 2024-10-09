@@ -1,5 +1,7 @@
 
 .link{
+    min-width :100px;
+    text-align: center;
     text-decoration: none;
     color: var(--color);
     font-size: 1rem;

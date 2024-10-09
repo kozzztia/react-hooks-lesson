@@ -2,16 +2,17 @@ import PropTypes from 'prop-types';
 import { Link } from "react-router-dom";
 import styles from './styles.module.css';
 
-const DepositLink = ({link}) => {
+const DepositLink = ({link , title}) => {
   return (
     <Link to={`/${link}`} className={styles.link}>
-        all {link} deposits
+        {title}
     </Link>
   )
 }
 
 DepositLink.propTypes = {
-  link: PropTypes.string.isRequired,
+  link: PropTypes.string,
+  title: PropTypes.string.isRequired,
 }
 
 export default DepositLink

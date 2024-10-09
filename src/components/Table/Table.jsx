@@ -1,10 +1,12 @@
 import PropTypes from "prop-types";
+import DepositLink from "../Link/DepositLink";
+
 
 
 import styles from "./styles.module.css";
 import {tableProperties} from "../../consts";
 
-const Table = ({ properties }) => {
+const Table = ({ properties, linked }) => {
     return (
         <table className={styles.table}>
             <thead>
@@ -25,7 +27,9 @@ const Table = ({ properties }) => {
                         <td >{property.deposit}</td>
                         <td >
                             {property.status}
-                            <span style={{backgroundColor: property.color}}></span>
+                            {
+                                linked ? <DepositLink link={`deposits/${property.id}`} title="Details"/>:
+                                <span style={{backgroundColor: property.color}}></span>}
                         </td>
                     </tr>
                 ))}
@@ -37,7 +41,8 @@ const Table = ({ properties }) => {
 }
 
 Table.propTypes = {
-    properties: PropTypes.array.isRequired
+    properties: PropTypes.array.isRequired,
+    linked: PropTypes.bool,
 }
 
 export default Table
